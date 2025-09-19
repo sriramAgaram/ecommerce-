@@ -1,0 +1,40 @@
+
+
+<div class="flex h-screen justify-center items-center">
+  <form [formGroup]="categoryCreateForm" 
+        (ngSubmit)="onSubmit()" 
+        class="flex flex-col gap-6 w-[400px] bg-white shadow-md p-8 rounded-xl">
+
+    <!-- Category Name -->
+    <p-floatLabel>
+      <input 
+        pInputText 
+        id="category_name" 
+        formControlName="category_name" 
+        class="w-full border border-gray-300 rounded-md p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
+      />
+      <label for="category_name">Category Name</label>
+    </p-floatLabel>
+
+    <!-- Category Description -->
+    <p-floatLabel>
+      <textarea 
+        pInputTextarea 
+        id="category_description" 
+        formControlName="description" 
+        rows="4"
+        class="w-full border border-gray-300 rounded-md p-2 focus:border-blue-500 focus:ring focus:ring-blue-200"
+      ></textarea>
+      <label for="description">Category Description</label>
+    </p-floatLabel>
+
+    <!-- Save Button -->
+    <button 
+      type="submit" 
+      class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition">
+      Save
+    </button>
+  </form>
+</div>
+
+
