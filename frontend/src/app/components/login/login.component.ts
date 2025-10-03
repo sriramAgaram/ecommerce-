@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { RouterLink, RouterModule } from '@angular/router';
+import { TabViewModule } from 'primeng/tabview';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterLink , RouterModule],
+  imports: [RouterLink , RouterModule, TabViewModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
