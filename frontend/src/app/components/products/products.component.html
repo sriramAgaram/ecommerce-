@@ -1,0 +1,269 @@
+<html>
+  <body>
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col bg-slate-50 group/design-root overflow-x-hidden"
+      style='--select-button-svg: url(&apos;data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(76,128,154)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e&apos;); font-family: "Work Sans", "Noto Sans", sans-serif;'
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="gap-1 px-6 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col w-80">
+            <h3 class="text-[#0d171b] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Filters</h3>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#0d171b] text-base font-medium leading-normal pb-2">Sort by</p>
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0d171b] focus:outline-0 focus:ring-0 border border-[#cfdfe7] bg-slate-50 focus:border-[#cfdfe7] h-14 bg-[image:--select-button-svg] placeholder:text-[#4c809a] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Featured</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <h3 class="text-[#0d171b] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Price</h3>
+            <div class="@container">
+              <div class="relative flex w-full flex-col items-start justify-between gap-3 p-4 @[480px]:flex-row">
+                <p class="text-[#0d171b] text-base font-medium leading-normal w-full shrink-[3]">Price Range</p>
+                <div class="flex h-[38px] w-full pt-1.5">
+                  <div class="flex h-1 w-full rounded-sm bg-[#cfdfe7] pl-[60%] pr-[15%]">
+                    <div class="relative">
+                      <div class="absolute -left-3 -top-1.5 flex flex-col items-center gap-1">
+                        <div class="size-4 rounded-full bg-[#1193d4]"></div>
+                        <p class="text-[#0d171b] text-sm font-normal leading-normal">$0</p>
+                      </div>
+                    </div>
+                    <div class="h-1 flex-1 rounded-sm bg-[#1193d4]"></div>
+                    <div class="relative">
+                      <div class="absolute -left-3 -top-1.5 flex flex-col items-center gap-1">
+                        <div class="size-4 rounded-full bg-[#1193d4]"></div>
+                        <p class="text-[#0d171b] text-sm font-normal leading-normal">$1000</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3 class="text-[#0d171b] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Size</h3>
+            <div class="flex flex-wrap gap-3 p-4">
+              <label
+                class="text-sm font-medium leading-normal flex items-center justify-center rounded-lg border border-[#cfdfe7] px-4 h-11 text-[#0d171b] has-[:checked]:border-[3px] has-[:checked]:px-3.5 has-[:checked]:border-[#1193d4] relative cursor-pointer"
+              >
+                XS
+                <input type="radio" class="invisible absolute" name="530313bd-8a2b-40ca-bc39-5fea0be6cee9" />
+              </label>
+              <label
+                class="text-sm font-medium leading-normal flex items-center justify-center rounded-lg border border-[#cfdfe7] px-4 h-11 text-[#0d171b] has-[:checked]:border-[3px] has-[:checked]:px-3.5 has-[:checked]:border-[#1193d4] relative cursor-pointer"
+              >
+                S
+                <input type="radio" class="invisible absolute" name="530313bd-8a2b-40ca-bc39-5fea0be6cee9" />
+              </label>
+              <label
+                class="text-sm font-medium leading-normal flex items-center justify-center rounded-lg border border-[#cfdfe7] px-4 h-11 text-[#0d171b] has-[:checked]:border-[3px] has-[:checked]:px-3.5 has-[:checked]:border-[#1193d4] relative cursor-pointer"
+              >
+                M
+                <input type="radio" class="invisible absolute" name="530313bd-8a2b-40ca-bc39-5fea0be6cee9" />
+              </label>
+              <label
+                class="text-sm font-medium leading-normal flex items-center justify-center rounded-lg border border-[#cfdfe7] px-4 h-11 text-[#0d171b] has-[:checked]:border-[3px] has-[:checked]:px-3.5 has-[:checked]:border-[#1193d4] relative cursor-pointer"
+              >
+                L
+                <input type="radio" class="invisible absolute" name="530313bd-8a2b-40ca-bc39-5fea0be6cee9" />
+              </label>
+              <label
+                class="text-sm font-medium leading-normal flex items-center justify-center rounded-lg border border-[#cfdfe7] px-4 h-11 text-[#0d171b] has-[:checked]:border-[3px] has-[:checked]:px-3.5 has-[:checked]:border-[#1193d4] relative cursor-pointer"
+              >
+                XL
+                <input type="radio" class="invisible absolute" name="530313bd-8a2b-40ca-bc39-5fea0be6cee9" />
+              </label>
+            </div>
+            <h3 class="text-[#0d171b] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Color</h3>
+            <div class="flex flex-wrap gap-5 p-4">
+              <label
+                class="size-10 rounded-full border border-[#cfdfe7] ring-[color-mix(in_srgb,#0d171b_50%,_transparent)] has-[:checked]:border-[3px] has-[:checked]:border-slate-50 has-[:checked]:ring"
+                style="background-color: rgb(255, 255, 255);"
+              >
+                <input type="radio" class="invisible" name="54bad986-40ba-4492-b9ac-5928a84f6983" checked="" />
+              </label>
+              <label
+                class="size-10 rounded-full border border-[#cfdfe7] ring-[color-mix(in_srgb,#0d171b_50%,_transparent)] has-[:checked]:border-[3px] has-[:checked]:border-slate-50 has-[:checked]:ring"
+                style="background-color: rgb(0, 0, 0);"
+              >
+                <input type="radio" class="invisible" name="54bad986-40ba-4492-b9ac-5928a84f6983" />
+              </label>
+              <label
+                class="size-10 rounded-full border border-[#cfdfe7] ring-[color-mix(in_srgb,#0d171b_50%,_transparent)] has-[:checked]:border-[3px] has-[:checked]:border-slate-50 has-[:checked]:ring"
+                style="background-color: rgb(255, 0, 0);"
+              >
+                <input type="radio" class="invisible" name="54bad986-40ba-4492-b9ac-5928a84f6983" />
+              </label>
+              <label
+                class="size-10 rounded-full border border-[#cfdfe7] ring-[color-mix(in_srgb,#0d171b_50%,_transparent)] has-[:checked]:border-[3px] has-[:checked]:border-slate-50 has-[:checked]:ring"
+                style="background-color: rgb(0, 255, 0);"
+              >
+                <input type="radio" class="invisible" name="54bad986-40ba-4492-b9ac-5928a84f6983" />
+              </label>
+              <label
+                class="size-10 rounded-full border border-[#cfdfe7] ring-[color-mix(in_srgb,#0d171b_50%,_transparent)] has-[:checked]:border-[3px] has-[:checked]:border-slate-50 has-[:checked]:ring"
+                style="background-color: rgb(0, 0, 255);"
+              >
+                <input type="radio" class="invisible" name="54bad986-40ba-4492-b9ac-5928a84f6983" />
+              </label>
+            </div>
+            <h3 class="text-[#0d171b] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Material</h3>
+            <div class="flex flex-wrap gap-3 p-4">
+              <label
+                class="text-sm font-medium leading-normal flex items-center justify-center rounded-lg border border-[#cfdfe7] px-4 h-11 text-[#0d171b] has-[:checked]:border-[3px] has-[:checked]:px-3.5 has-[:checked]:border-[#1193d4] relative cursor-pointer"
+              >
+                Cotton
+                <input type="radio" class="invisible absolute" name="017e6b47-2275-4504-b441-ddd28a279df3" />
+              </label>
+              <label
+                class="text-sm font-medium leading-normal flex items-center justify-center rounded-lg border border-[#cfdfe7] px-4 h-11 text-[#0d171b] has-[:checked]:border-[3px] has-[:checked]:px-3.5 has-[:checked]:border-[#1193d4] relative cursor-pointer"
+              >
+                Polyester
+                <input type="radio" class="invisible absolute" name="017e6b47-2275-4504-b441-ddd28a279df3" />
+              </label>
+              <label
+                class="text-sm font-medium leading-normal flex items-center justify-center rounded-lg border border-[#cfdfe7] px-4 h-11 text-[#0d171b] has-[:checked]:border-[3px] has-[:checked]:px-3.5 has-[:checked]:border-[#1193d4] relative cursor-pointer"
+              >
+                Wool
+                <input type="radio" class="invisible absolute" name="017e6b47-2275-4504-b441-ddd28a279df3" />
+              </label>
+              <label
+                class="text-sm font-medium leading-normal flex items-center justify-center rounded-lg border border-[#cfdfe7] px-4 h-11 text-[#0d171b] has-[:checked]:border-[3px] has-[:checked]:px-3.5 has-[:checked]:border-[#1193d4] relative cursor-pointer"
+              >
+                Silk
+                <input type="radio" class="invisible absolute" name="017e6b47-2275-4504-b441-ddd28a279df3" />
+              </label>
+            </div>
+          </div>
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-[#0d171b] tracking-light text-[32px] font-bold leading-tight min-w-72">All Products</p></div>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwRTaATz_XTdm0davElpQkJD9UhPMS3gIW4HFF9Qod5ZqeyfNWuB4kamiDWsLZoY6HxtGTt853tV66HmHkpVEkim9_PTQwJQIHMhekN-s5ygliWg24bwba95AMk7uDMBxp7MBkp1-XHjsObiw8WfnHhVBOxkJCv7dUHTLN8JW3L_2lsMNvQYso7Mzif92KoJ7PVCMkUbV-yzbSG2ugJdXraONJjTFBAL92XYEYPrU0-pSbVZe1DTU0V74fi5AGVppFi1ZBOLd-dsDN");'
+                ></div>
+                <div>
+                  <p class="text-[#0d171b] text-base font-medium leading-normal">Classic White Tee</p>
+                  <p class="text-[#4c809a] text-sm font-normal leading-normal">$25</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA3VwBrhrsB_Zx-V2QOcDsZYpStUa1bkW5BKxBuD0NLCh4ux0KVWVF4BxNEyTJmHrzxgqjshXwQDWkxF0l2ZGeIkWzbPzdzv9ASCEg2xHkccMBHB1jNq6FUOnjKInTqjsXfOjgKoF7DDX_Cqf4VyUNaTPx5vf5Tzs9aiG-5c6-qQipILJWubh2MLCUpQazbxmJWJKduLp9uuk8yfrY1sE-k63DNTZBF4G9wFVrhRsZ2wf-I1MGjHZ381agSHP5B-ctrsSo9GYCKrvnE");'
+                ></div>
+                <div>
+                  <p class="text-[#0d171b] text-base font-medium leading-normal">Slim Fit Jeans</p>
+                  <p class="text-[#4c809a] text-sm font-normal leading-normal">$75</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEEcYE06YTYDyOmnSPorXaIIcHfLrWyv_vakoNXyRa4TNsTR6gmsgIRqTga-CfnTYBcUOheAFRfYCQnYVfRKBSalkRKDPnunfYdGbdS-8quCb7ErZ-ATzvj9Si-645rJpD3Ukfq9Cc2P7kFA4erZndZseOyU0M7NekKecUd37Ac1c70Euyrrig7C2JaU5YvB8kT-bqPHEqsZ1McmatgT8OfjvxcyCOnuEnBLxwQC10NlfrALWen6AvAtYCp0EVfKPOYxGVAi3sHoJB");'
+                ></div>
+                <div>
+                  <p class="text-[#0d171b] text-base font-medium leading-normal">Leather Jacket</p>
+                  <p class="text-[#4c809a] text-sm font-normal leading-normal">$200</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdFl6emV3mizfT7D6MIoxAT05eQkuCQUR63QGt1-93J6e9moCaaoLXEs1uJKoKR3trE8Uosh50za1unBUiwtDl9vBD2A08Jx8sdNO3coEydETFCMKQOGeDUkeVtIc9dk4cMIjQbWuGhi9fIabC9bw8q4D7y2C7uUuGqhlZqR84tR7RBdXzKIfyNsK42RT_icMWYP8MeIYNGn3vvIxonCTGwDGcM4ajez0EFKbSnM9e5RekXEj0TWdUJrL5P-XQpflOqwmBQUUvV1jO");'
+                ></div>
+                <div>
+                  <p class="text-[#0d171b] text-base font-medium leading-normal">Summer Dress</p>
+                  <p class="text-[#4c809a] text-sm font-normal leading-normal">$50</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5sRDiKe8DBNsJGB1CCdHmETSWpOak32-xEGNzxCFaWYMIdTNIsLhZGZbKgcxjfm1oXa_HFyzZhJOidl2wUHknuBid2qL0SNBJ0_vNYAiH4hVaCTlbZqGF8P5pbEXfWxU0ilXj0GPJ5Fc29rAkF0-OTkfxn8BVJiuPDVY_pYSLWnY779ZQdzbDbjphBRxQ2vzcgp3hpZBIGbVJJ7044z-yGGq5pVixgnGpTX2lZj5b8i0k7b9APcgrBTuoKvSgCx7iLv4n8JC0RwRc");'
+                ></div>
+                <div>
+                  <p class="text-[#0d171b] text-base font-medium leading-normal">Running Shoes</p>
+                  <p class="text-[#4c809a] text-sm font-normal leading-normal">$100</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC5Cfjnuj6vUoL1bZ2ECdinhR6g-wfcbVjZQh_CMk-mMc4GrNzuLXwfZtkc-0lrW10WVuJybJnbk_V0W63ALX1cwTUXeOj1mpeeyJ_gPnShRhW1xfYGH8HoyvgZTojTiFquU7xQvn1yC8xCJv2-NY-uvUBNJDRVueYgOgXZ0ACuMiXoy9vjC8U00jif963zrU-cNEyzFaUyPwJl5mbMEy2lVkP_eGwc1u7HQb3JSv8IWWfcnEStQI6wG_Vx34ReT3TMcgq6PRoKTBHA");'
+                ></div>
+                <div>
+                  <p class="text-[#0d171b] text-base font-medium leading-normal">Casual Sneakers</p>
+                  <p class="text-[#4c809a] text-sm font-normal leading-normal">$80</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRzXml3Wtsw-jwcwZmisLWomTU157jRSCtuEKfE5jJ9JMmmJQfH4kRLZucYIOJOd-BdcMY2v88Gph9tdAsBCs0UZpn4a2m_SSVTOzp5ydedOd8s9HdB9HWnULcuYFz_lzIWNby2D-kUpsrt-fBJFCdbrc-pnqNFMG-FIsQwTmvytZAiTbZhabXN_Ii9Nhj30MDjeLROt2VGeKNWMnX_PFQaeOP0-5Hzb1swYVN1QuQi1U7ecjvGXgDgey9BEZqlDE0ZzUhCXQXN-c0");'
+                ></div>
+                <div>
+                  <p class="text-[#0d171b] text-base font-medium leading-normal">Wool Sweater</p>
+                  <p class="text-[#4c809a] text-sm font-normal leading-normal">$120</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDH_49Mkz_7xmWQzeyO7gYRlHUkPKN9kMe0VuKXcv03feMCFjwllvcdSgWTaGp2p18AWeTm5UKZdgNBHOXSAEE08hpij-cmgnXjAaxrFK2_dZaGzYHUrC0LlzqFk6AMorPwRfULba40uQX173MduaXdM3c4SVQagy9O6JKsD8IhMLrGvn9oeTvfNPgSrIpIZfMqYzU43T2RSr1hytNnbpjrsb-QOjf5o-nEU5Ko_yvTc_42DHlCz3KCuZQYhxNwUxwGtEd6O-3bFFsP");'
+                ></div>
+                <div>
+                  <p class="text-[#0d171b] text-base font-medium leading-normal">Denim Skirt</p>
+                  <p class="text-[#4c809a] text-sm font-normal leading-normal">$60</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzM4L3OgB0PMpWXM_il_TNPStcI9l0Xw9CyMnObvO3oBQRfrY31CMNA1F_3XZ6yUbgvaXuQJjsCmH_atw-4iazBaDoNh7VKoUb5Bk4ll31C0Nc0FU3d4WSJNFZrJcfRDq1zJCN6NqXcMS6Qmy0-IXe4UIteLwSuP_JYURO9u3eZ07GDGotDL0fEaO9ldr7RExuXClVXZN9aVqEWF7m9S1R7SPakEEPAW8w4dOPmGq_6la6kqmY2C4DDby_w5XDNMRawl1zlJwxuDPx");'
+                ></div>
+                <div>
+                  <p class="text-[#0d171b] text-base font-medium leading-normal">Ankle Boots</p>
+                  <p class="text-[#4c809a] text-sm font-normal leading-normal">$150</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRplFpZM_ptkucch9NDzP0x6WzE_3b29f9rPdyONph5DaUfU-IJWJLAuIbYOTkCSOUE-k1bYJDa5TpZIPJxxcI9X9mb5dNZ3NN3W3RNaBGeQygNssfM9M0NPyZfjMje7aynXo9hgyzW4R3CrptbpmzXMGWzuWNUa41pjs5cDdzqf9oicEpAyN9ctsEVICxAR1Z8KLR3PVmM4Bbht7-aNv5QK9ZmwaZgx2cX5mZD0pdKPeW_UxHO6To3rEbwGq0nwMyXyfY_jCJUZdC");'
+                ></div>
+                <div>
+                  <p class="text-[#0d171b] text-base font-medium leading-normal">Leather Belt</p>
+                  <p class="text-[#4c809a] text-sm font-normal leading-normal">$40</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC6tEihM4pAzPVaJkp5RWiGSfBV5jb8MfJ5eGoF5Y7WDMpR8rIOrOhLg1N09Uz2Vvc6YJbiXoC3PQ0rikbyFjClqCz_GwqDRSp3gLToDSKGxiKQl9WTpn2NLErthGa8vbG_MZy3XbLNCVTdADtktkj0Hy2kNdQH2oBOxj5oymk4XmM3YHENopyyGCC_ni7P5nDgwoK-QUDCgK16A00uWsgJCXOsTJc1Ubr2k0kjCv4cTFticDZ3iVZHtfpB-2BJeL5_fmWT1wmNiw6B");'
+                ></div>
+                <div>
+                  <p class="text-[#0d171b] text-base font-medium leading-normal">Baseball Cap</p>
+                  <p class="text-[#4c809a] text-sm font-normal leading-normal">$30</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAhP0c4o78NclwxW5r28uBVQdutC_OrFt-1C2WF8kh8R05AnDiBnFpsvrmGj4tjnG85X3HyO-_BEvZOdd_zR2QRBn99FzdauI1b15luhyzLGK1YHajlAwXWqMvaVGiZh1lxn_Phg_jeRV0YGJrrp6UdRqS5ZV-i0a8U8TisuleDX177WJxWCCfkVQoRr26puKSn2uHBXZhoWTVR3H5fr4Hp7Nkan6lVPxvR5tpedSHghJ_07KG5kuF4FRBO0ShpUa3CdFQ0vj2Q5_No");'
+                ></div>
+                <div>
+                  <p class="text-[#0d171b] text-base font-medium leading-normal">Sunglasses</p>
+                  <p class="text-[#4c809a] text-sm font-normal leading-normal">$50</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
