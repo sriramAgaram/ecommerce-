@@ -1,7 +1,7 @@
 'use strict';
 
 exports.SuccessResponse = (res, data = {}, msg = 'Success') => {
-    return res.status(200).json({ status: true, message, data })
+    return res.status(200).json({ status: true, msg, data })
 }
 
 exports.ErrorResponse = (res, error, msg = 'Failed') => {

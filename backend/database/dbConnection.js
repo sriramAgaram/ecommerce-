@@ -3,7 +3,7 @@ const qe = require('qeasy');
 exports.connectsDb = () => {
     qe.connectDB({
         host: 'localhost',
-        password: 'root',
+        password: 'welcome123',
         user: 'root',
         database: 'ecommerce'
     })
