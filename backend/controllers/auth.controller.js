@@ -10,7 +10,7 @@ exports.signupController = async (req, res) => {
         const { email, password } = req.body;
         if (email) {
             const isExistingEmail = await findById('auth', 'email', email);
-            if (isExistingEmail > 0) {
+            if (isExistingEmail.email === email) {
                 ErrorResponse(res, 'This Email is Already Signed Please sign in ')
             } else {
                 const hashedPassword = await bcrypt.hash(password, 13);
@@ -27,9 +27,10 @@ exports.signupController = async (req, res) => {
 exports.loginController = async (req, res) => {
     try {
         const { email, password } = req.body;
+    console.log(email , password)
         if (email && password) {
-            const user = await findById(auth, 'email', email);
-            if (user.length > 0) {
+            const user = await findById('auth', 'email', email);
+            if (user.email !== email) {
                 ErrorResponse(res, 'There is no email please signup', 'there is no email Please sign up')
             } else {
                 const isMatch = bcrypt.compare(password, user.password);
@@ -45,6 +46,7 @@ exports.loginController = async (req, res) => {
         }
 
     } catch (error) {
+        console.error('error from login controller' , error)
         ErrorResponse(res, error, 'Failed to Login')
     }
 }
