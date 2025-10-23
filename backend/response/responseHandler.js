@@ -5,5 +5,5 @@ exports.SuccessResponse = (res, data = {}, msg = 'Success') => {
 }
 
 exports.ErrorResponse = (res, error, msg = 'Failed') => {
-    return res.status(400).json({ status: false, error, message: msg })
+    return res.status(400).json({ status: false, error:error.message, message: msg })
 }

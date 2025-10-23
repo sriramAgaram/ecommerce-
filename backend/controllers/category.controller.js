@@ -4,19 +4,20 @@ const { getCategoryInsertFields } = require("../models/category.model");
 const { SuccessResponse, ErrorResponse } = require("../response/responseHandler");
 
 exports.add = async (req, res) => {
-    try {
-        const userInput = req.body;
-        console.log(userInput)
-        let insertObj = dbCommonFileds(req, userInput, true);
-        console.log(insertObj);
-        
-        insertObj = getCategoryInsertFields(insertObj);
-        const category = await insert('categories', insertObj);
-        SuccessResponse(res, category, 'success');
-    } catch (error) {
-        ErrorResponse(res, error, 'Error from add category controller');
-    }
-}
+  try {
+    let userInput = req.body;
+    let insertObj = dbCommonFileds(req, userInput, true);
+    insertObj['category_description'] = insertObj.description
+    insertObj = getCategoryInsertFields(insertObj);
+    const category = await insert('categories', insertObj);
+    SuccessResponse(res, category, 'success');
+  } catch (error) {
+    console.error('ERROR DETAILS:', error.message);
+    console.error('STACK TRACE:\n', error.stack);
+    ErrorResponse(res, error, 'Error from add category controller');
+  }
+};
+
 
 
 exports.lists = async (req, res) => {

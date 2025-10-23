@@ -3,14 +3,16 @@
 const { pick } = require("lodash");
 
 exports.getCategoryInsertFields = (fileds) =>{
-    const object = {};
+    let object = {};
 
     if(fileds){
-        object = pick(object,[
+        object = pick(fileds,[
             'category_name',
-            'description',
+            'category_description',
             'created_by',
             'updated_by'
         ])
     }
+
+    return object;
 }

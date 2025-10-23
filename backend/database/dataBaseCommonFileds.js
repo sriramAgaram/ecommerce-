@@ -1,8 +1,10 @@
 
-exports.dbCommonFileds = (req, user_input , isCreate = false) =>{
+exports.dbCommonFileds = (req, userInput , isCreate = false) =>{
     if(isCreate){
-        user_input.created_by = req.auth_user.id;
+        userInput['created_by'] = req.user.userId;
     }else {
-        user_input.updated_by = req.auth_user.id;
+        userInput['updated_by'] = req.user.userId;
     }
+
+    return userInput ;
 }

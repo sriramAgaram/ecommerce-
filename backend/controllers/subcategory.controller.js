@@ -11,8 +11,7 @@ exports.add = async (req, res) => {
         let subcategoryObj = dbCommonFileds(userInput);
         subcategoryObj = subCategoryModel(subcategoryObj);
         const subcategory = await qeasy.insert('sub_categories', subcategoryObj);
-        SuccessResponse(res, subcategory, 'Sub Category Added SuccessFully')
-
+        SuccessResponse(res, subcategory, 'Sub Category Added SuccessFully');
     } catch (error) {
         console.error('Error from sub category Controller', error);
         ErrorResponse(res, error, 'Failed to Add Sub Category');

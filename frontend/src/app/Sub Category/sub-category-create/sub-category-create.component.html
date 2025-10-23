@@ -1,1 +1,33 @@
-<p>sub-category-create works!</p>
+<div class="px-40 flex flex-1 justify-center py-5">
+    <div class="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
+        <form [formGroup]="subcategoryForm" (ngSubmit)="onSubmit()">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+                <p class="text-[#0d171b] tracking-light text-[32px] font-bold leading-tight min-w-72">Add Subcategory
+                </p>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                    <p class="text-[#0d171b] text-base font-medium leading-normal pb-2">Subcategory Name</p>
+                    <input placeholder="e.g., T-shirts" formControlName="subcategory_name"
+                        class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0d171b] focus:outline-0 focus:ring-0 border border-[#cfdfe7] bg-slate-50 focus:border-[#cfdfe7] h-14 placeholder:text-[#4c809a] p-[15px] text-base font-normal leading-normal"
+                        value="" />
+                </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                    <p class="text-[#0d171b] text-base font-medium leading-normal pb-2">Description</p>
+                    <textarea placeholder="Describe the subcategory" formControlName="description"
+                        class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0d171b] focus:outline-0 focus:ring-0 border border-[#cfdfe7] bg-slate-50 focus:border-[#cfdfe7] min-h-36 placeholder:text-[#4c809a] p-[15px] text-base font-normal leading-normal"></textarea>
+                </label>
+            </div>
+            <div class="flex px-4 py-3 justify-end">
+                <button type="submit"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1193d4] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]">
+                    <span class="truncate">Save</span>
+                </button>
+            </div>
+        </form>
+
+   
+</div>
+</div>

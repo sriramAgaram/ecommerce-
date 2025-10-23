@@ -59,14 +59,12 @@ export class LoginComponent {
       password: this.authForm.value.password
     }
 
-    const response = this.http.post <loginResponse>('http://localhost:5000/auth/login', obj).subscribe({
+    this.http.post<loginResponse>('http://localhost:5000/auth/login', obj).subscribe({
       next: (res) => {
         if(res.status){
           localStorage.setItem('token', res.data);
           this.route.navigate(['/'])
-        }else {
-          this.route.navigate(['/login'])
-        }      
+        }
       }, error: (err) => {
         console.error(err)
       }
