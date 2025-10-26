@@ -9,6 +9,10 @@ exports.add = async (req, res) => {
         const userInput = req.body
         let insertObj = dbCommonFileds(req, userInput, true);
         insertObj = productInsertFileds(insertObj);
+        insertObj.image_url = JSON.stringify(insertObj.image_url);
+        insertObj.category_id = JSON.stringify(insertObj.category_id);
+        insertObj.sub_category_id =JSON.stringify(insertObj.sub_category_id);
+        console.log(insertObj)
         const products = await qeasy.insert('products', insertObj);
         SuccessResponse(res, products, 'Product Added SuccessFully')
     } catch (error) {
@@ -26,6 +30,20 @@ exports.lists = async (req, res) => {
         ErrorResponse(res, error, 'Failed to Add Product');
     }
 };
+
+exports.details = async (req , res) =>{
+ try {
+    const id = req.params.id;
+    const checkIsExistingProduct = await qeasy.findById('products','product_id',id);
+    if(checkIsExistingProduct === 0){
+        return ErrorResponse(res, 'Product is not found', 'Product Is Not Found')
+    }else{
+        return SuccessResponse(res , checkIsExistingProduct , 'Product details fetched successfully')
+    }
+ } catch (error) {
+    return ErrorResponse(res, error, 'Failed to fetch prodct')
+ }
+}
 
 exports.update = async (req, res) => {
     try {

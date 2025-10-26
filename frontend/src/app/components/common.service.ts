@@ -1,9 +1,16 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environment';
 
  interface Response {
     status: boolean,
     msg: string
+  }
+
+  interface getResponse { 
+    status: boolean,
+    msg: string,
+    data: any
   }
 
 @Injectable({
@@ -30,9 +37,14 @@ export class CommonService {
   }
 
 
-  postCallMethod(obj:any){
+  postCallMethod(obj:any, url:string){
     const headers = this.getAuthToken()
-    return this.api.post<Response>('http://localhost:5000/api/v1/subcategories/add', obj , {headers})
+    return this.api.post<Response>(`${environment.apiBaseUrl}${url}`, obj , {headers})
+  }
+
+  getCallMethod(url:string){
+    const headers = this.getAuthToken()
+    return this.api.get<getResponse>(`${environment.apiBaseUrl}${url}`, {headers})
   }
  
 }

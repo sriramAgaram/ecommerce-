@@ -7,6 +7,7 @@ exports.subCategoryModel = (fields) =>{
     if(fields){
      obj = pick(fields, [
          'category_id',
+         'subcategory_name',
          'description',
          'created_by',
          'updated_by'

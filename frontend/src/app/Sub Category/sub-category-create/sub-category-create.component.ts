@@ -20,7 +20,7 @@ export class SubCategoryCreateComponent {
   })
 
   onSubmit(){
-   this.api.postCallMethod(this.subcategoryForm.value).subscribe({
+   this.api.postCallMethod(this.subcategoryForm.value,'/subcategories/add').subscribe({
       next:(res)=>{
         if(res.status){
           alert('Sub category created successfully')

@@ -1,0 +1,33 @@
+<div class="flex flex-col items-center p-4 border-2 border-dashed border-gray-300 rounded-2xl bg-gray-50 hover:bg-gray-100 transition">
+  <!-- File input -->
+  <input
+    type="file"
+    multiple
+    (change)="onFileSelect($event)"
+    class="hidden"
+    id="fileInput"
+  />
+
+  <label
+    for="fileInput"
+    class="cursor-pointer text-blue-600 font-medium hover:underline"
+  >
+    Click to select images
+  </label>
+
+  <!-- Preview Section -->
+  <div *ngIf="previewUrls.length > 0" class="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    <div *ngFor="let img of previewUrls" class="relative">
+      <img [src]="img" class="w-full h-32 object-cover rounded-xl shadow" />
+    </div>
+  </div>
+
+  <!-- Upload Button -->
+  <button
+    (click)="uploadImages()"
+    [disabled]="uploading || selectedFiles.length === 0"
+    class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 disabled:opacity-50"
+  >
+    {{ uploading ? 'Uploading...' : 'Upload' }}
+  </button>
+</div>

@@ -1,4 +1,4 @@
-const { insert, findByIdAndDelete, findByIdAndUpdate } = require("qeasy");
+const { insert, findByIdAndDelete, findByIdAndUpdate, findAll } = require("qeasy");
 const { dbCommonFileds } = require("../database/dataBaseCommonFileds");
 const { getCategoryInsertFields } = require("../models/category.model");
 const { SuccessResponse, ErrorResponse } = require("../response/responseHandler");
@@ -22,10 +22,14 @@ exports.add = async (req, res) => {
 
 exports.lists = async (req, res) => {
     try {
+        console.log('route is working........');
+        
         const allProducts = await findAll('categories');
-        SuccessResponse(res, allProducts, 'success')
+        console.log(allProducts);
+        
+        return SuccessResponse(res, allProducts, 'success')
     } catch (error) {
-        ErrorResponse(res, error, 'Error from category Lists');
+        return ErrorResponse(res, error, 'Error from category Lists');
     }
 }
 

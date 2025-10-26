@@ -5,6 +5,7 @@ exports.productInsertFileds = (fields) => {
     if (fields) {
         object = pick(fields, [
             'category_id',
+            'sub_category_id',
             'product_name',
             'description',
             'price',

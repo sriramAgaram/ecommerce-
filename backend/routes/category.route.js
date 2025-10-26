@@ -3,6 +3,7 @@ const categoryController = require('../controllers/category.controller');
 const { authenticateJWT } = require('../middelwares/jwt');
 
 router.post('/lists',categoryController.lists);
+router.get('/lists', categoryController.lists)
 router.post('/add', authenticateJWT,categoryController.add);
 router.put('/update/:id', categoryController.update);
 router.delete('/delete/:id', categoryController.delete);

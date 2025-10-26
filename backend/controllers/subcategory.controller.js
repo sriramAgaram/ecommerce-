@@ -7,10 +7,11 @@ const { dbCommonFileds } = require('../database/dataBaseCommonFileds');
 
 exports.add = async (req, res) => {
     try {
+        console.log(req)
         const userInput = req.body;
-        let subcategoryObj = dbCommonFileds(userInput);
+        let subcategoryObj = dbCommonFileds(req,userInput,true);
         subcategoryObj = subCategoryModel(subcategoryObj);
-        const subcategory = await qeasy.insert('sub_categories', subcategoryObj);
+        const subcategory = await qeasy.insert('subcategories', subcategoryObj);
         SuccessResponse(res, subcategory, 'Sub Category Added SuccessFully');
     } catch (error) {
         console.error('Error from sub category Controller', error);
@@ -20,11 +21,11 @@ exports.add = async (req, res) => {
 
 exports.lists = async (req, res) => {
     try {
-        const allSubCategories = await qeasy.findAll('sub_categories');
+        const allSubCategories = await qeasy.findAll('subcategories');
         SuccessResponse(res, allSubCategories, 'Sub Categories List')
     } catch (error) {
         console.error('Error from Add Controller', error);
-        ErrorResponse(res, error, 'Failed to Add Product');
+        ErrorResponse(res, error, 'Failed to list Product');
     }
 };
 
