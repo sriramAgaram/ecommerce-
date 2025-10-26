@@ -3,14 +3,14 @@ import { Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { InputTextModule } from 'primeng/inputtext';
-import { InputTextareaModule } from 'primeng/inputtextarea';
+import { TextareaModule } from 'primeng/textarea';
 @Component({
   selector: 'app-category-create',
   standalone: true,
   imports: [
     FloatLabelModule,
     InputTextModule,
-    InputTextareaModule,
+    TextareaModule,
     ReactiveFormsModule
   ],
   templateUrl: './category-create.component.html',
