@@ -13,7 +13,7 @@ export class NavComponent {
   isOpen = false;
 
   toggleNav(){
-    this.isOpen != this.isOpen
+    this.isOpen = !this.isOpen
   }
 
 }
